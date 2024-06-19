@@ -8,8 +8,6 @@
   - `lite_version.py`: Prueba modelos TensorFlow Lite individuales.
   - `multiple_models.py`: Utiliza un modelo general que redirige a modelos específicos basados en la seña detectada.
 
-## Descripción de `multiple_models.py`
-
 ## Detalles del Script `multiple_models.py`
 
 ### Importación de Librerías
