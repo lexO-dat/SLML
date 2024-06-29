@@ -11,7 +11,7 @@
 ## Detalles del Script `multiple_models.py`
 
 ### Importación de Librerías
-Utiliza OpenCV (`opencv-python`), MediaPipe (`mediapipe`), NumPy (`numpy`), y TensorFlow (`tensorflow`) para procesar imágenes y manejar modelos de aprendizaje automático.
+Utiliza OpenCV (`opencv-python`), MediaPipe (`mediapipe`), NumPy (`numpy`), y TensorFlow 15.1.0 (`tensorflow`) para procesar imágenes y manejar modelos de aprendizaje automático.
 
 ### Configuración y Procesamiento
 - **MediaPipe**: Inicializa la detección de manos.
