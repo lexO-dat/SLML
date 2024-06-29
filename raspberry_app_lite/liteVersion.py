@@ -17,7 +17,7 @@ def enviar_letra(letra):
     except requests.exceptions.RequestException as e:
         print("Error al enviar la letra:", e)
 
-interpreter = tf.lite.Interpreter(model_path="../Model/GENERAL_MODEL_V2.tflite")
+interpreter = tf.lite.Interpreter(model_path="../Model/CO.tflite")
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
@@ -33,7 +33,7 @@ imgSize = 224
 word = ""
 prev_letter = None
 previous_letter = None
-labels = ["ABHOL", "CDGIY"]
+labels = ["C", "o"]
 
 while True:
     #enable for the raspberry

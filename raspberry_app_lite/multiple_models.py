@@ -9,7 +9,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 
 #Carga el modelo general a tensorflow
-interpreter_groups = tf.lite.Interpreter(model_path="../Model/GENERAL_MODEL.tflite")
+interpreter_groups = tf.lite.Interpreter(model_path="../Model/GENERAL_MODEL.tflite")    
 interpreter_groups.allocate_tensors()
 input_details_groups = interpreter_groups.get_input_details()
 output_details_groups = interpreter_groups.get_output_details()
@@ -24,14 +24,15 @@ hands = mp_hands.Hands(
 cap = cv2.VideoCapture(0)
 
 #asigna los grupos para el modelo general
-labels_groups = ["CO", "HG", "AST", "IJY"]
+labels_groups = ["CO", "HG", "AET", "IJY", "BDKLU"]
 
 #mapea las letras para usarlas con el modelo especifico
 specific_labels_dict = {
     "CO": ["c", "o"],
     "HG": ["h", "g"],
-    "AST": ["a", "s", "t"],
-    "IJY": ["i", "j", "y"]
+    "AET": ["a", "e", "t"],
+    "IJY": ["i", "j", "y"],
+    "BDKLU": ["b", "d", "k", "l", "u"]
 }
 
 while cap.isOpened():
@@ -72,7 +73,7 @@ while cap.isOpened():
             #print("Grupo detectado:", group_label)
             
             #se llama al modelo especifico
-            path_to_specific_model = f"../Model/{group_label}.tflite"
+            path_to_specific_model = f"../Model/{group_label}/{group_label}.tflite"
             interpreter_specific = tf.lite.Interpreter(model_path=path_to_specific_model)
             interpreter_specific.allocate_tensors()
             input_details_specific = interpreter_specific.get_input_details()

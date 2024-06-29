@@ -18,7 +18,7 @@ hands = mp_hands.Hands(
 cap = cv2.VideoCapture(0)
 
 #Se crea una carpeta para guardar las imágenes
-save_folder = "../data/test/F"
+save_folder = "../data/I"
 os.makedirs(save_folder, exist_ok=True)  # Crea la carpeta si no existe
 
 frame_counter = 0 

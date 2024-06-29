@@ -10,7 +10,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 
 # Load TensorFlow Lite model.
-interpreter = tf.lite.Interpreter(model_path="../Model/BDFKLUW.tflite")
+interpreter = tf.lite.Interpreter(model_path="../Model/BDKLU.tflite")
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
@@ -24,7 +24,7 @@ hands = mp_hands.Hands(
 # Video capture initialization.
 cap = cv2.VideoCapture(0)
 
-labels = ["B", "D", "F", "K", "L", "U", "W"]
+labels = ["B", "D", "K", "L", "U"]
 
 while cap.isOpened():
     success, image = cap.read()
