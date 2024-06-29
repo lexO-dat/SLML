@@ -9,7 +9,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 
 #Carga el modelo general a tensorflow
-interpreter_groups = tf.lite.Interpreter(model_path="../Model/GENERAL_MODEL.tflite")    
+interpreter_groups = tf.lite.Interpreter(model_path="../Model/GENERAL_MODEL/GENERAL_MODEL.tflite")    
 interpreter_groups.allocate_tensors()
 input_details_groups = interpreter_groups.get_input_details()
 output_details_groups = interpreter_groups.get_output_details()
